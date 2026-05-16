@@ -10,7 +10,7 @@ const CONFIG = {
    * Substitua pelo link real do seu grupo/canal do WhatsApp.
    * Exemplo: 'https://chat.whatsapp.com/XXXXXXXXXXXXXXXX'
    */
-  whatsappLink: 'https://chat.whatsapp.com/SEU_LINK_AQUI',
+  whatsappLink: 'https://chat.whatsapp.com/GYL3zJS5lajAcBqt53NKoQ',
 
   /**
    * Classe CSS dos botões CTA que devem abrir o WhatsApp.
