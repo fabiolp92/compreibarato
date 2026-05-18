@@ -43,14 +43,12 @@ function initWhatsAppCTAs() {
     // Evento de clique para rastreamento / analytics
     btn.addEventListener('click', (e) => {
       console.log('[CTA] Clique no botão WhatsApp:', btn.textContent.trim());
+      fbq('track', 'Lead');
 
       /**
        * Se quiser integrar com Google Analytics 4, descomente:
        * gtag('event', 'click_whatsapp_cta', { button_text: btn.textContent.trim() });
-       *
-       * Para Meta Pixel:
-       * fbq('track', 'Lead');
-       */
+             */
     });
   });
 }
