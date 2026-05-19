@@ -1,306 +1,283 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO -->
   <title>Comprei Barato FC | Promoções Reais no WhatsApp</title>
-  <meta name="description" content="Receba promoções reais, cupons exclusivos e ofertas relâmpago do Mercado Livre, Amazon, Shopee e mais diretamente no seu WhatsApp. 100% gratuito." />
+  <meta name="description" content="Receba promoções reais, cupons exclusivos e ofertas relâmpago do Mercado Livre, Amazon, Shopee e mais no WhatsApp. 100% gratuito." />
   <link rel="canonical" href="https://compreibaratofc.com.br/" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://compreibaratofc.com.br/" />
   <meta property="og:title" content="Comprei Barato FC | Promoções Reais no WhatsApp" />
-  <meta property="og:description" content="Receba promoções reais, cupons exclusivos e ofertas relâmpago diretamente no seu WhatsApp. 100% gratuito." />
+  <meta property="og:description" content="Promoções selecionadas todos os dias. Entre grátis no grupo VIP." />
   <meta property="og:image" content="/assets/img/og-cover.jpg" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Comprei Barato FC | Promoções Reais no WhatsApp" />
-  <meta name="twitter:description" content="Promoções selecionadas todos os dias. Entre grátis no grupo VIP." />
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2855112121487546');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2855112121487546&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  <!-- Favicon placeholder -->
   <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
-
-  <!-- Preload CSS principal -->
-  <link rel="preload" href="style.css" as="style" />
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      background: #0B0F19;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.25rem;
+      text-align: center;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 20%, rgba(37,211,102,0.13) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 80%, rgba(255,138,0,0.07) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    main {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.1rem;
+    }
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #8A93A8;
+      letter-spacing: 0.01em;
+    }
+    .logo strong { color: #25D366; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(37,211,102,0.1);
+      border: 1px solid rgba(37,211,102,0.25);
+      color: #25D366;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.3rem 0.85rem;
+      border-radius: 50px;
+      letter-spacing: 0.02em;
+    }
+    .badge-dot {
+      width: 6px; height: 6px;
+      background: #25D366;
+      border-radius: 50%;
+      animation: blink 1.4s ease-in-out infinite;
+    }
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%      { opacity: 0.2; }
+    }
+    .wa-icon {
+      width: 100px;
+      height: 100px;
+      background: #25D366;
+      border-radius: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 50px rgba(37,211,102,0.4), 0 8px 32px rgba(0,0,0,0.5);
+      animation: iconPop 0.5s cubic-bezier(0.34,1.56,0.64,1) both, glowPulse 3s ease-in-out 1s infinite;
+      flex-shrink: 0;
+    }
+    @keyframes iconPop {
+      from { opacity: 0; transform: scale(0.5); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes glowPulse {
+      0%,100% { box-shadow: 0 0 50px rgba(37,211,102,0.4), 0 8px 32px rgba(0,0,0,0.5); }
+      50%      { box-shadow: 0 0 80px rgba(37,211,102,0.6), 0 8px 32px rgba(0,0,0,0.5); }
+    }
+    .wa-icon svg { width: 58px; height: 58px; fill: #fff; }
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.9rem, 7vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: #fff;
+    }
+    h1 span { color: #25D366; display: block; }
+    .sub {
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      color: #8A93A8;
+      line-height: 1.55;
+      max-width: 360px;
+    }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      width: 100%;
+      background: linear-gradient(135deg, #25D366, #1aad52);
+      color: #000;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1rem, 4vw, 1.1rem);
+      text-decoration: none;
+      padding: 1.1rem 1.5rem;
+      border-radius: 50px;
+      min-height: 60px;
+      box-shadow: 0 0 40px rgba(37,211,102,0.3), 0 4px 24px rgba(0,0,0,0.4);
+      transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s, filter 0.2s;
+      animation: ctaPulse 2.5s ease-in-out 1.5s infinite;
+      letter-spacing: 0.01em;
+    }
+    @keyframes ctaPulse {
+      0%,100% { box-shadow: 0 0 40px rgba(37,211,102,0.3), 0 4px 24px rgba(0,0,0,0.4); }
+      50%      { box-shadow: 0 0 70px rgba(37,211,102,0.55), 0 4px 24px rgba(0,0,0,0.4); }
+    }
+    .btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      filter: brightness(1.08);
+      animation: none;
+      box-shadow: 0 0 70px rgba(37,211,102,0.5), 0 8px 32px rgba(0,0,0,0.5);
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn svg { width: 22px; height: 22px; fill: #000; flex-shrink: 0; }
+    .note { font-size: 0.78rem; color: #5A6378; margin-top: -0.3rem; }
+    .pills { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; list-style: none; }
+    .pills li {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      color: #8A93A8;
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.32rem 0.8rem;
+      border-radius: 50px;
+    }
+    footer {
+      position: relative;
+      z-index: 1;
+      margin-top: 2rem;
+      font-size: 0.72rem;
+      color: #3A4155;
+    }
+    footer a { color: #3A4155; text-decoration: none; }
+    @media (hover: none) {
+      .btn:hover { transform: none; filter: none; animation: ctaPulse 2.5s ease-in-out 1.5s infinite; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+    :focus-visible { outline: 2px solid #25D366; outline-offset: 3px; border-radius: 4px; }
+  </style>
 </head>
 <body>
 
-  <!-- ========== HEADER / NAV ========== -->
-  <header class="site-header" role="banner">
-    <nav class="nav-container" aria-label="Navegação principal">
-      <div class="nav-logo">
-        <span class="logo-icon" aria-hidden="true">🛍️</span>
-        <span class="logo-text">Comprei<strong>Barato</strong>FC</span>
-      </div>
-      <a href="#cta-final" class="nav-cta" aria-label="Entrar no grupo VIP do WhatsApp">Entrar no Grupo</a>
-    </nav>
-  </header>
-
   <main>
 
-    <!-- ========== HERO SECTION ========== -->
-    <section class="hero" aria-label="Seção principal">
-      <div class="hero-bg-glow" aria-hidden="true"></div>
+```
+<p class="logo">Comprei<strong>Barato</strong>FC</p>
 
-      <div class="hero-content">
+<div class="badge" aria-label="Grupo ativo">
+  <span class="badge-dot" aria-hidden="true"></span>
+  Grupo ativo · Atualizado diariamente
+</div>
 
-        <!-- Badge de confiança -->
-        <div class="hero-badge" aria-label="Grupo verificado">
-          <span class="badge-dot" aria-hidden="true"></span>
-          Grupo ativo · Atualizado diariamente
-        </div>
+<div class="wa-icon" aria-hidden="true">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</div>
 
-        <!-- H1 único -->
-        <h1 class="hero-title">
-          Promoções reais<br />
-          <span class="hero-title-accent">direto no WhatsApp</span>
-        </h1>
+<h1>
+  Promoções reais<br />
+  <span>direto no WhatsApp</span>
+</h1>
 
-        <p class="hero-subtitle">
-          Ofertas do Mercado Livre, Amazon, Shopee e mais — sem spam, 100% gratuito.
-        </p>
+<p class="sub">
+  Ofertas do Mercado Livre, Amazon, Shopee e mais — sem spam, 100% gratuito.
+</p>
 
-        <!-- CTA Principal -->
-        <div class="hero-cta-wrap">
-          <a href="#" class="btn-cta btn-cta--hero js-whatsapp-cta" aria-label="Entrar no grupo VIP do WhatsApp gratuitamente">
-            🔥 ENTRAR NO GRUPO VIP
-          </a>
-          <p class="cta-note" aria-label="Entrada gratuita">🔒 Gratuito · Sem compromisso · Saia quando quiser</p>
-        </div>
+<a href="https://chat.whatsapp.com/GYL3zJS5lajAcBqt53NKoQ"
+   class="btn js-cta"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Entrar no grupo VIP do WhatsApp gratuitamente">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  ENTRAR NO GRUPO GRÁTIS
+</a>
 
-        <!-- Trust pills abaixo do CTA -->
-        <ul class="trust-list" aria-label="Diferenciais do grupo">
-          <li>
-            <span class="trust-pill-icon" aria-hidden="true">🛡️</span>
-            <span>Sem spam</span>
-          </li>
-          <li>
-            <span class="trust-pill-icon" aria-hidden="true">✅</span>
-            <span>Ofertas verificadas</span>
-          </li>
-          <li>
-            <span class="trust-pill-icon" aria-hidden="true">🔗</span>
-            <span>Links oficiais</span>
-          </li>
-        </ul>
+<p class="note">🔒 Gratuito · Sem compromisso · Saia quando quiser</p>
 
-      </div>
-
-      <!-- Scroll indicator -->
-      <div class="scroll-indicator" aria-hidden="true">
-        <div class="scroll-line"></div>
-      </div>
-    </section>
-
-    <!-- ========== BENEFÍCIOS ========== -->
-    <section class="benefits" id="beneficios" aria-labelledby="benefits-title">
-      <div class="section-container">
-
-        <header class="section-header">
-          <h2 id="benefits-title" class="section-title">O que você recebe</h2>
-          <p class="section-sub">Curadoria diária das melhores oportunidades do mercado</p>
-        </header>
-
-        <div class="benefits-grid" role="list">
-
-          <article class="benefit-card" role="listitem">
-            <div class="benefit-icon" aria-hidden="true">🛒</div>
-            <h3 class="benefit-title">Promoções reais</h3>
-            <p class="benefit-text">Apenas produtos com desconto verdadeiro, comparados ao preço médio do mercado.</p>
-          </article>
-
-          <article class="benefit-card" role="listitem">
-            <div class="benefit-icon" aria-hidden="true">⚡</div>
-            <h3 class="benefit-title">Ofertas relâmpago</h3>
-            <p class="benefit-text">Avisamos imediatamente quando uma oferta imperdível aparece, antes que acabe.</p>
-          </article>
-
-          <article class="benefit-card" role="listitem">
-            <div class="benefit-icon" aria-hidden="true">🎁</div>
-            <h3 class="benefit-title">Cupons exclusivos</h3>
-            <p class="benefit-text">Cupons de desconto selecionados para você economizar ainda mais em cada compra.</p>
-          </article>
-
-          <article class="benefit-card" role="listitem">
-            <div class="benefit-icon" aria-hidden="true">📦</div>
-            <h3 class="benefit-title">Links oficiais</h3>
-            <p class="benefit-text">Todos os links são diretos para as lojas oficiais. Zero risco, total segurança.</p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== CATEGORIAS ========== -->
-    <section class="categories" id="categorias" aria-labelledby="categories-title">
-      <div class="section-container">
-
-        <header class="section-header">
-          <h2 id="categories-title" class="section-title">Categorias em destaque</h2>
-          <p class="section-sub">Promoções de tudo o que você precisa</p>
-        </header>
-
-        <nav class="categories-grid" aria-label="Categorias de produtos">
-          <a href="#" class="cat-card" aria-label="Promoções Mercado Livre">
-            <span class="cat-icon" aria-hidden="true">📦</span>
-            <span class="cat-name">Mercado Livre</span>
-          </a>
-          <a href="#" class="cat-card" aria-label="Promoções Amazon">
-            <span class="cat-icon" aria-hidden="true">🛒</span>
-            <span class="cat-name">Amazon</span>
-          </a>
-          <a href="#" class="cat-card" aria-label="Promoções Shopee">
-            <span class="cat-icon" aria-hidden="true">🧡</span>
-            <span class="cat-name">Shopee</span>
-          </a>
-          <a href="#" class="cat-card" aria-label="Promoções de Eletrônicos">
-            <span class="cat-icon" aria-hidden="true">🎧</span>
-            <span class="cat-name">Eletrônicos</span>
-          </a>
-          <a href="#" class="cat-card" aria-label="Promoções Casa e Cozinha">
-            <span class="cat-icon" aria-hidden="true">🏠</span>
-            <span class="cat-name">Casa & Cozinha</span>
-          </a>
-          <a href="#" class="cat-card" aria-label="Promoções Academia e Fitness">
-            <span class="cat-icon" aria-hidden="true">🏋️</span>
-            <span class="cat-name">Academia</span>
-          </a>
-          <a href="#" class="cat-card" aria-label="Promoções para Pets">
-            <span class="cat-icon" aria-hidden="true">🐶</span>
-            <span class="cat-name">Pet</span>
-          </a>
-          <a href="#" class="cat-card cat-card--highlight" aria-label="Achadinhos variados">
-            <span class="cat-icon" aria-hidden="true">✨</span>
-            <span class="cat-name">Achadinhos</span>
-            <span class="cat-badge" aria-label="Novidades">Novo</span>
-          </a>
-        </nav>
-
-      </div>
-    </section>
-
-    <!-- ========== CONFIANÇA ========== -->
-    <section class="trust" id="por-que-entrar" aria-labelledby="trust-title">
-      <div class="section-container">
-
-        <header class="section-header">
-          <h2 id="trust-title" class="section-title">Por que entrar no grupo?</h2>
-          <p class="section-sub">A diferença que você vai notar no primeiro dia</p>
-        </header>
-
-        <ul class="trust-reasons" aria-label="Motivos para entrar no grupo">
-          <li class="trust-item">
-            <span class="trust-icon" aria-hidden="true">✅</span>
-            <div>
-              <strong>Produtos realmente com desconto</strong>
-              <p>Verificamos o histórico de preços antes de postar qualquer oferta.</p>
-            </div>
-          </li>
-          <li class="trust-item">
-            <span class="trust-icon" aria-hidden="true">🔄</span>
-            <div>
-              <strong>Atualizações frequentes</strong>
-              <p>Novas promoções todos os dias, ao longo do dia.</p>
-            </div>
-          </li>
-          <li class="trust-item">
-            <span class="trust-icon" aria-hidden="true">🔍</span>
-            <div>
-              <strong>Ofertas verificadas</strong>
-              <p>Cada link é testado antes de chegar até você.</p>
-            </div>
-          </li>
-          <li class="trust-item">
-            <span class="trust-icon" aria-hidden="true">🔕</span>
-            <div>
-              <strong>Sem spam exagerado</strong>
-              <p>Postamos apenas o que vale a pena, sem encher sua notificação.</p>
-            </div>
-          </li>
-          <li class="trust-item">
-            <span class="trust-icon" aria-hidden="true">💡</span>
-            <div>
-              <strong>Produtos úteis e achadinhos</strong>
-              <p>Do básico do dia a dia aos achados surpreendentes do mercado.</p>
-            </div>
-          </li>
-        </ul>
-
-      </div>
-    </section>
-
-    <!-- ========== CTA FINAL ========== -->
-    <section class="cta-final" id="cta-final" aria-labelledby="cta-final-title">
-      <div class="cta-final-bg" aria-hidden="true"></div>
-      <div class="section-container cta-final-content">
-
-        <h2 id="cta-final-title" class="cta-final-title">Pronto para economizar?</h2>
-        <p class="cta-final-text">Entre gratuitamente no grupo VIP e receba promoções todos os dias.</p>
-
-        <a href="#" class="btn-cta btn-cta--final js-whatsapp-cta" aria-label="Entrar gratuitamente no grupo do WhatsApp">
-          ENTRAR GRÁTIS NO WHATSAPP
-        </a>
-
-        <p class="cta-final-note">🔒 Nenhuma informação de pagamento necessária</p>
-
-      </div>
-    </section>
+<ul class="pills" aria-label="Diferenciais">
+  <li><span aria-hidden="true">🛡️</span> Sem spam</li>
+  <li><span aria-hidden="true">✅</span> Ofertas verificadas</li>
+  <li><span aria-hidden="true">🔗</span> Links oficiais</li>
+</ul>
+```
 
   </main>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-container">
-
-      <div class="footer-logo">
-        <span aria-hidden="true">🛍️</span>
-        <span>Comprei<strong>Barato</strong>FC</span>
-      </div>
-
-      <nav class="footer-nav" aria-label="Links do rodapé">
-        <a href="/">Início</a>
-        <a href="/blog">Blog</a>
-        <a href="/privacidade">Política de Privacidade</a>
-        <a href="/termos">Termos de Uso</a>
-      </nav>
-
-      <p class="footer-copy">
-        © <span id="footer-year"></span> Comprei Barato FC · Todos os direitos reservados
-      </p>
-
-      <p class="footer-disclaimer">
-        Este site contém links de afiliados. Ao comprar pelos nossos links, podemos receber uma comissão sem custo adicional para você.
-      </p>
-
-    </div>
+  <footer>
+    <p>© <span id="yr"></span> Comprei Barato FC &nbsp;·&nbsp;
+      <a href="/privacidade">Privacidade</a> &nbsp;·&nbsp;
+      <a href="/termos">Termos</a>
+    </p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Meta Pixel -->
+
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2855112121487546');
+    fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2855112121487546&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel -->
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    const btn = document.querySelector('.js-cta');
+
+    // Touch feedback
+    btn.addEventListener('touchstart', () => btn.style.transform = 'scale(0.97)', { passive: true });
+    btn.addEventListener('touchend',   () => btn.style.transform = '', { passive: true });
+    btn.addEventListener('touchcancel',() => btn.style.transform = '', { passive: true });
+
+    // Meta Pixel — dispara Lead no clique
+    btn.addEventListener('click', () => {
+      if (typeof fbq === 'function') fbq('track', 'Lead');
+    });
+  </script>
+
 </body>
 </html>
