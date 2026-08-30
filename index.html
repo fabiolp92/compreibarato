@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#14161a">
+<title>CompreiBaratoFC | Camisas de Time e Seleções</title>
+<meta name="description" content="Camisas de time e seleções, versão jogador e torcedor, retrô e kit infantil. A partir de R$80 a peça. Atendimento direto no WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --panel:#f7f7f7; --linha:#e9e9e9;
+    --ink:#14161a; --dim:#767a82; --marca:#1c2b4a; --zap:#25D366;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth; background:#fff; color-scheme:light;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'Inter', Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .display{font-family:'Anton', Impact, sans-serif; letter-spacing:.5px;}
+  .limite{max-width:1220px; margin:0 auto; padding:0 18px;}
+
+  /* ---------------------------------------------------------- HERO */
+  .hero{
+    background:linear-gradient(135deg,#14161a 0%,#1c2b4a 55%,#16324f 100%);
+    color:#fff; padding:52px 18px 46px; text-align:center; position:relative; overflow:hidden;
+  }
+  .hero::after{
+    content:''; position:absolute; inset:0; opacity:.07;
+    background:repeating-linear-gradient(115deg,#fff 0 2px,transparent 2px 22px);
+  }
+  .hero-conteudo{position:relative; z-index:1; max-width:760px; margin:0 auto;}
+  .hero .selo{
+    display:inline-block; background:rgba(37,211,102,.16); color:#7ef0ab;
+    border:1px solid rgba(37,211,102,.4); padding:5px 13px; border-radius:999px;
+    font-size:11px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase;
+  }
+  .hero h1{
+    font-family:'Anton',Impact,sans-serif; font-size:clamp(34px,6.4vw,60px);
+    line-height:.96; text-transform:uppercase; margin:16px 0 12px;
+  }
+  .hero h1 em{font-style:normal; color:#7ef0ab;}
+  .hero p{font-size:15px; color:#c6ccd6; line-height:1.6; max-width:520px; margin:0 auto;}
+  .hero-botoes{display:flex; gap:11px; justify-content:center; flex-wrap:wrap; margin-top:26px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; padding:13px 26px;
+    border-radius:999px; font-size:14px; font-weight:800; text-decoration:none; border:none; cursor:pointer;
+  }
+  .btn-zap{background:var(--zap); color:#0b1c12;}
+  .btn-linha{background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,.45);}
+
+  /* ------------------------------------------------------- PRECOS */
+  .precos{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--linha); border:1px solid var(--linha);
+    border-radius:14px; overflow:hidden; margin:30px auto 0; max-width:620px;
+  }
+  .precos div{background:#fff; text-align:center; padding:15px 8px;}
+  .precos .qtd{
+    display:block; font-size:10.5px; color:var(--dim);
+    text-transform:uppercase; letter-spacing:1.1px; margin-bottom:5px;
+  }
+  .precos .val{font-family:'Anton',sans-serif; font-size:26px; color:var(--marca);}
+  .precos .melhor .val{color:#128c3f;}
+
+  /* ------------------------------------------------------ SECOES */
+  .secao{padding:46px 0 8px;}
+  .secao-topo{
+    display:flex; align-items:flex-end; justify-content:space-between;
+    gap:14px; margin-bottom:16px; flex-wrap:wrap;
+  }
+  .secao h2{
+    font-family:'Anton',sans-serif; font-size:23px;
+    text-transform:uppercase; color:var(--marca); line-height:1.1;
+  }
+  .secao .sub{font-size:13px; color:var(--dim); margin-top:4px;}
+  .link-tudo{
+    font-size:13px; font-weight:700; color:var(--marca);
+    text-decoration:none; white-space:nowrap; border-bottom:2px solid var(--zap); padding-bottom:2px;
+  }
+
+  /* ------------------------------------------- VITRINE (carrossel) */
+  .vitrine{
+    display:flex; gap:14px; overflow-x:auto; padding:4px 2px 18px;
+    scroll-snap-type:x mandatory; scrollbar-width:thin;
+  }
+  .prod{
+    flex:0 0 auto; width:200px; scroll-snap-align:start;
+    border:1px solid var(--linha); border-radius:14px; overflow:hidden;
+    background:#fff; display:flex; flex-direction:column;
+    text-decoration:none; color:inherit; transition:box-shadow .15s ease;
+  }
+  .prod:hover{box-shadow:0 6px 18px rgba(0,0,0,.09);}
+  .prod-foto{aspect-ratio:1/1; background:var(--panel); position:relative; overflow:hidden;}
+  .prod-foto img{width:100%; height:100%; object-fit:contain; display:block;}
+  .prod-tag{
+    position:absolute; top:8px; left:8px; background:rgba(0,0,0,.62); color:#fff;
+    font-size:9px; font-weight:700; letter-spacing:.5px; text-transform:uppercase;
+    padding:3px 7px; border-radius:5px;
+  }
+  .prod-corpo{padding:10px 12px 13px; display:flex; flex-direction:column; gap:4px; flex:1;}
+  .prod-liga{font-size:9.5px; letter-spacing:1px; text-transform:uppercase; color:var(--marca); font-weight:700;}
+  .prod-nome{font-size:14px; font-weight:700; line-height:1.25;}
+  .prod-meta{font-size:11.5px; color:var(--dim);}
+  .prod-preco{margin-top:auto; padding-top:7px; font-size:13px; font-weight:800; color:#128c3f;}
+
+  /* -------------------------------------------------- CATEGORIAS */
+  .tiles{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:12px; padding-bottom:8px;
+  }
+  .tile{
+    border:1px solid var(--linha); border-radius:14px; padding:22px 16px;
+    text-decoration:none; color:var(--marca); background:#fff;
+    display:flex; flex-direction:column; gap:5px; transition:.15s ease;
+  }
+  .tile:hover{border-color:var(--marca); transform:translateY(-2px);}
+  .tile .emoji{font-size:22px;}
+  .tile b{font-family:'Anton',sans-serif; font-size:16px; text-transform:uppercase; letter-spacing:.4px;}
+  .tile span{font-size:12px; color:var(--dim);}
+
+  /* ----------------------------------------------------- CONFIANCA */
+  .confianca{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:1px;
+    background:var(--linha); border-top:1px solid var(--linha); border-bottom:1px solid var(--linha);
+    margin-top:44px;
+  }
+  .confianca div{background:#fff; padding:20px 16px; text-align:center;}
+  .confianca b{display:block; font-size:13.5px; margin-bottom:3px;}
+  .confianca span{font-size:12px; color:var(--dim);}
+
+  /* --------------------------------------------------------- CTA */
+  .cta{background:var(--panel); text-align:center; padding:48px 18px;}
+  .cta h2{font-family:'Anton',sans-serif; font-size:27px; text-transform:uppercase; color:var(--marca);}
+  .cta p{font-size:14px; color:var(--dim); margin:9px auto 22px; max-width:430px; line-height:1.6;}
+
+  /* ------------------------------------------------------ RODAPE */
+  footer{background:#14161a; color:#9aa0aa; padding:40px 18px 26px; font-size:13px;}
+  .rodape-cols{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:26px; max-width:1220px; margin:0 auto 26px;
+  }
+  .rodape-cols h3{
+    font-size:10.5px; letter-spacing:1.2px; text-transform:uppercase;
+    color:#fff; margin-bottom:11px; font-weight:800;
+  }
+  .rodape-cols a, .rodape-cols p{display:block; color:#9aa0aa; text-decoration:none; padding:3px 0; line-height:1.5;}
+  .rodape-cols a:hover{color:#fff;}
+  .rodape-fim{
+    text-align:center; border-top:1px solid #24272e; padding-top:18px;
+    font-size:11.5px; color:#6b7078; max-width:1220px; margin:0 auto;
+  }
+
+  .zap-flutua{
+    position:fixed; bottom:16px; right:16px; z-index:60;
+    background:var(--zap); color:#fff; padding:11px 19px; border-radius:999px;
+    font-size:13px; font-weight:800; text-decoration:none;
+    box-shadow:0 8px 22px rgba(0,0,0,.25); display:flex; align-items:center; gap:7px;
+  }
+  @media(max-width:600px){
+    .precos .val{font-size:21px;}
+    .prod{width:158px;}
+    .zap-flutua{left:50%; right:auto; transform:translateX(-50%);}
+  }
+</style>
+</head>
+<body>
+
+<div id="topo"></div>
+
+<section class="hero">
+  <div class="hero-conteudo">
+    <span class="selo">Coleção 26/27 no ar</span>
+    <h1>A camisa do seu time<br><em>sem pagar caro</em></h1>
+    <p>Seleções e clubes, versão jogador e torcedor, retrô e kit infantil. Você escolhe no catálogo e fecha direto no WhatsApp.</p>
+    <div class="hero-botoes">
+      <a class="btn btn-zap" href="catalogo.html">Ver o catálogo</a>
+      <a class="btn btn-linha" id="hero-zap" href="#" target="_blank">Falar no WhatsApp</a>
+    </div>
+    <div class="precos">
+      <div><span class="qtd">1 peça</span><span class="val">R$150</span></div>
+      <div><span class="qtd">A partir de 3</span><span class="val">R$100</span></div>
+      <div class="melhor"><span class="qtd">A partir de 5</span><span class="val">R$80</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="limite">
+  <section class="secao">
+    <div class="secao-topo">
+      <div>
+        <h2>Peças em destaque</h2>
+        <div class="sub" id="sub-destaque">Fotografadas e disponíveis agora.</div>
+      </div>
+      <a class="link-tudo" href="catalogo.html">Ver catálogo completo →</a>
+    </div>
+    <div class="vitrine" id="vitrine-destaque"></div>
+  </section>
+
+  <section class="secao">
+    <div class="secao-topo">
+      <div>
+        <h2>Seleções</h2>
+        <div class="sub">Rumo à Copa de 2026.</div>
+      </div>
+      <a class="link-tudo" href="catalogo.html?tipo=selecao">Ver todas →</a>
+    </div>
+    <div class="vitrine" id="vitrine-selecoes"></div>
+  </section>
+
+  <section class="secao">
+    <div class="secao-topo">
+      <div>
+        <h2>Clubes</h2>
+        <div class="sub">Europa e América do Sul.</div>
+      </div>
+      <a class="link-tudo" href="catalogo.html?tipo=clube">Ver todos →</a>
+    </div>
+    <div class="vitrine" id="vitrine-clubes"></div>
+  </section>
+
+  <section class="secao">
+    <div class="secao-topo"><div><h2>Navegue por categoria</h2></div></div>
+    <div class="tiles">
+      <a class="tile" href="catalogo.html?tipo=selecao"><span class="emoji">🌎</span><b>Seleções</b><span>58 países</span></a>
+      <a class="tile" href="catalogo.html?liga=Premier League · Inglaterra"><span class="emoji">🦁</span><b>Premier League</b><span>14 clubes</span></a>
+      <a class="tile" href="catalogo.html?liga=La Liga · Espanha"><span class="emoji">🇪🇸</span><b>La Liga</b><span>14 clubes</span></a>
+      <a class="tile" href="catalogo.html?liga=Brasileirão"><span class="emoji">🇧🇷</span><b>Brasileirão</b><span>15 clubes</span></a>
+      <a class="tile" href="catalogo.html?temporada=retro"><span class="emoji">📼</span><b>Retrô</b><span>Edições clássicas</span></a>
+      <a class="tile" href="catalogo.html?genero=infantil"><span class="emoji">🧒</span><b>Kit Infantil</b><span>Camisa + calção</span></a>
+      <a class="tile" href="catalogo.html?categoria=calcao"><span class="emoji">🩳</span><b>Calções</b><span>Feche o conjunto</span></a>
+      <a class="tile" href="catalogo.html?categoria=jaqueta"><span class="emoji">🧥</span><b>Jaquetas</b><span>Corta-vento e treino</span></a>
+    </div>
+  </section>
+</div>
+
+<div class="confianca">
+  <div><b>Envio pra todo Brasil</b><span>Combinado no WhatsApp</span></div>
+  <div><b>Quanto mais, mais barato</b><span>A partir de R$80 a peça</span></div>
+  <div><b>Atendimento direto</b><span>Sem robô, sem cadastro</span></div>
+</div>
+
+<section class="cta">
+  <h2>Não achou seu time?</h2>
+  <p>O catálogo tem 217 times entre seleções e clubes. Se não estiver lá, chama no WhatsApp que a gente procura pra você.</p>
+  <a class="btn btn-zap" id="cta-zap" href="#" target="_blank">Chamar no WhatsApp</a>
+</section>
+
+<footer>
+  <div class="rodape-cols">
+    <div>
+      <h3>Navegação</h3>
+      <a href="index.html">Início</a>
+      <a href="catalogo.html">Catálogo completo</a>
+      <a href="catalogo.html?tipo=selecao">Seleções</a>
+      <a href="catalogo.html?tipo=clube">Clubes</a>
+      <a href="catalogo.html?temporada=retro">Retrô</a>
+      <a href="catalogo.html?genero=infantil">Kit Infantil</a>
+    </div>
+    <div>
+      <h3>Temporadas</h3>
+      <a href="catalogo.html?temporada=26-27">Coleção 26/27</a>
+      <a href="catalogo.html?temporada=25-26">Coleção 25/26</a>
+      <a href="catalogo.html?categoria=calcao">Calções</a>
+      <a href="catalogo.html?categoria=jaqueta">Jaquetas e agasalhos</a>
+    </div>
+    <div>
+      <h3>Como funciona</h3>
+      <p>Escolhe a peça no catálogo, toca em "Consultar no WhatsApp" e a conversa já abre com o modelo certo.</p>
+      <p>Pagamento e frete combinados no atendimento.</p>
+    </div>
+    <div>
+      <h3>Contato</h3>
+      <a id="rodape-zap" href="#" target="_blank">Falar no WhatsApp</a>
+    </div>
+  </div>
+  <div class="rodape-fim">
+    CompreiBaratoFC · Catálogo atualizado periodicamente<br>
+    Imagens meramente ilustrativas. Marcas e escudos pertencem aos seus respectivos titulares.
+  </div>
+</footer>
+
+<a class="zap-flutua" id="flutua-zap" href="#" target="_blank">
+  <svg width="14" height="14" viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-1.9A12 12 0 0016 27c6.6 0 12-5.4 12-12S22.6 3 16 3z"/></svg>
+  Falar no WhatsApp
+</a>
+
+<script src="dados.js"></script>
+<script src="nav.js"></script>
+<script>
+  montarTopo('home');
+
+  function linkZap(texto){
+    return `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(texto)}`;
+  }
+  ['hero-zap','cta-zap','rodape-zap','flutua-zap'].forEach(id=>{
+    const e = document.getElementById(id);
+    if(e) e.href = linkZap('Olá! Vi o site e quero saber mais sobre as camisas.');
+  });
+
+  // ============================================================
+  // VITRINES — montadas a partir do FOTOS do dados.js.
+  // A home so mostra peça fotografada: foto nova no dados.js
+  // entra aqui sozinha, sem mexer neste arquivo.
+  // ============================================================
+  const PRECO_DE = 'R$150 · 3+ por R$100';
+
+  // "Real Madrid - Masculino - 26/27 - 1º Uniforme Versão Torcedor"
+  //  -> {time, genero, temporada, peca}
+  function lerChave(chave){
+    const p = chave.split(' - ');
+    if(p.length === 4) return {time:p[0], genero:p[1], temporada:p[2], peca:p[3]};
+    if(p.length === 3) return {time:p[0], genero:p[1], temporada:null, peca:p[2]};
+    return null;
+  }
+
+  const porNome = Object.fromEntries(times.map(t=>[t.nome, t]));
+  const itens = Object.entries(FOTOS).map(([chave, foto])=>{
+    const d = lerChave(chave);
+    if(!d) return null;
+    const t = porNome[d.time];
+    if(!t) return null;
+    return {...d, foto, liga:t.liga, selecao:!!t.selecao,
+            href:`catalogo.html?time=${encodeURIComponent(d.time)}`};
+  }).filter(Boolean);
+
+  function cardProduto(i){
+    const rotuloPeca = i.peca.replace(' Versão Torcedor','').replace(' Versão Jogador','');
+    return `
+      <a class="prod" href="${i.href}">
+        <div class="prod-foto">
+          <img src="${i.foto}" alt="${i.time} ${rotuloPeca}" loading="lazy">
+          <span class="prod-tag">${rotuloPeca}</span>
+        </div>
+        <div class="prod-corpo">
+          <span class="prod-liga">${i.liga}</span>
+          <span class="prod-nome">${i.time}</span>
+          <span class="prod-meta">${i.genero}${i.temporada ? ' · ' + i.temporada : ''}</span>
+          <span class="prod-preco">${PRECO_DE}</span>
+        </div>
+      </a>`;
+  }
+
+  function encher(id, lista, vazio){
+    const alvo = document.getElementById(id);
+    if(!alvo) return 0;
+    const secao = alvo.closest('.secao');
+    if(!lista.length){ if(secao) secao.style.display = 'none'; return 0; }
+    alvo.innerHTML = lista.map(cardProduto).join('');
+    return lista.length;
+  }
+
+  const n = encher('vitrine-destaque', itens);
+  encher('vitrine-selecoes', itens.filter(i=>i.selecao));
+  encher('vitrine-clubes',   itens.filter(i=>!i.selecao));
+  const sub = document.getElementById('sub-destaque');
+  if(sub) sub.textContent = `${n} peças fotografadas e prontas pra consulta.`;
+</script>
+</body>
+</html>
